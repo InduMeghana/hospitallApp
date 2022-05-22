@@ -1,0 +1,10 @@
+<diV class=".container">
+    <h3 class="text-center">admin login</h3>
+<form (ngSubmit)="onclick()">
+    <label for="user">UserId</label>
+    <input type="text" class="form-control" id="user" [(ngModel)] = "login.userid" name="name">
+    <label for="pwd">Password</label>
+    <input type="password" class="form-control" id="pwd" [(ngModel)]="login.password" name="password"><br>
+    <div class="col-md-12 text-center"><button class="btn btn-success" ng-click="onclick()" type="submit">submit</button></div>
+</form>
+</diV>

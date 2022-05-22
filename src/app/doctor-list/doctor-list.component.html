@@ -1,0 +1,10 @@
+<h2 class="text-center">Doctors Information</h2>
+<form>
+    <div class="form-group">
+    <select name="selectdoctor" [(ngModel)]="Selected">
+        <option *ngFor="let doctor of doctors" [ngValue]=doctor>{{doctor.name}}</option>
+    </select><br>
+    <div class="col-md-12 text-center"><button class="btn btn-success" (click)="onsubmit()" type="submit">Show information</button></div>
+    </div>
+</form>
+<div class="text-center" [innerHtml]="info()"></div>

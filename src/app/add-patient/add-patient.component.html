@@ -1,0 +1,14 @@
+<h2 class="text-center">Enter patient information</h2>
+<form >
+    <div class="form-group">
+        <label for id="name">Patent Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)] = "patient.name" name="name"> 
+        <label>Doctor Visited</label><br>
+        <select name="doctor-visited" [(ngModel)]="Specific">
+            <option *ngFor="let doctor of doctors" [ngValue]=doctor>{{doctor.name}}</option>
+        </select><br>
+        <label for id="date">Date</label>
+        <input type="date" class="form-control" id="date" [(ngModel)] = "patient.date" name="date"><br>
+        <div class="col-md-12 text-center"><button class="btn btn-success" (click)="onsubmission()" type="submit">submit</button></div>
+    </div>
+</form>

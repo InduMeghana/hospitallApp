@@ -1,0 +1,21 @@
+<h2 class="text-center">Doctors Information</h2>
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark" style="background-color: black;color: aqua;">
+        <tr>
+            <td>Doctor Name</td>
+            <td>Doctor Age</td>
+            <td>Doctor Gender</td>
+            <td>Doctor Specialisation</td>
+            <td>No.of patients Attended</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let doctor of doctors"> 
+            <td>{{doctor.name}}</td>
+            <td>{{doctor.age}}</td>
+            <td>{{doctor.gender}}</td>
+            <td>{{doctor.specialization}}</td>
+            <td>{{doctor.count}}</td>
+        </tr>
+    </tbody>
+</table>

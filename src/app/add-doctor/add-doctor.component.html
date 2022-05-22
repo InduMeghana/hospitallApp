@@ -1,0 +1,17 @@
+<div class="col-md">
+<h3 class="text-center">Doctor Information Form</h3>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group ">
+        <label for="firstname">First Name</label>
+        <input type="text" class="form-control" id="firstname" [(ngModel)] = "doctor.name" name="name"> 
+        <label for="age">Age</label>
+        <input type="number" class="form-control" id="age" [(ngModel)] = "doctor.age" name="age">
+        <label for="gender">Gender</label>
+        <input type="text" class="form-control" id="gender" [(ngModel)] = "doctor.gender" name="gender"> 
+        <label for="specialisation">Specialisation</label>
+        <input type="text" class="form-control" id="specialisation" [(ngModel)] = "doctor.specialization" name="specialisation">
+        <br>
+        <div class="col-md-12 text-center"><button class="btn btn-success" type="submit">submit</button> </div>
+    </div>
+</form>
+</div>
