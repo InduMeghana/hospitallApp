@@ -19,12 +19,14 @@ export class ShowPatientComponent implements OnInit {
   ngOnInit(): void {
   }
   onsubmit(){
-    this.patientservices.GetPatient(this.value).subscribe(data=>{this.patient=data;},response=>{this.resp=response.status;});
-   if(this.resp==404){
+    this.patientservices.GetPatient(this.value).subscribe(data=>{this.patient=data;},error=>{this.res=error});
+   if(this.res!=undefined){
      this.msg="<b>Resource Not Found</b>";
+     this.res=undefined;
    }
     else{
       this.msg="Patient name: "+this.patient.name+"<br>Doctor visited:"+this.patient.visiteddoctor;
+      this.patient=undefined;
     }
     }
     content(){
